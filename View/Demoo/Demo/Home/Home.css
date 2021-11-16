@@ -1,0 +1,108 @@
+*{
+	margin: auto;
+}
+
+table a input[type="submit"]
+{
+    text-decoration: none;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #000000;
+	color: #FFFFFF;
+	font-size: 18px;
+	border-radius: 10px;
+}
+table a input[type="submit"]:hover
+{ 
+	cursor: pointer;
+	height: 60px;
+	width: inherit;
+	background:#262626;
+	color:#fff;
+}
+table
+{
+	text-decoration: none;
+    border-spacing: inherit;
+    border-style:inset;
+    border: 1px;			
+	width: 100%;
+	text-indent: 50px;
+	background-color:#000000;
+}
+/*
+marquee
+{
+	height: 21px;
+	text-decoration: none;
+    border-spacing: inherit;
+    border-style:inset;
+    border: 1px;			
+	width: 100%;
+	text-indent: 50px;
+	color: #FFFFFF;
+	background-color:#020202;
+	font-size: 20px;
+}
+*/
+
+body
+{
+	
+    background-image:url("2.jfif");
+	background-repeat: no-repeat;
+    background-size:cover;
+			
+}
+
+     
+.SiteLogo
+{
+	padding-top: 10px;
+    width:120px;
+    height:100px;
+	   
+}
+
+.NewTbutton {
+  display: flex;
+  height: 50px;
+  padding: 0;
+  top: 50%;
+  left:20%;		
+  position: absolute;
+  background: #273984;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.NewTbutton:hover {
+  background: #4760C8;
+}
+
+.NewTbutton:active {
+  background: #7689D6;
+}
+
+.NewTbutton__text,
+.NewTbutton__icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  color: #fff;
+  height: 100%;
+}
+
+.NewTbutton__icon {
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.08);
+}
+

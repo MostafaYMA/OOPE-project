@@ -1,0 +1,88 @@
+*{
+	margin: auto;
+}
+
+table a input[type="submit"]
+{
+    text-decoration: none;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #000000;
+	color: #FFFFFF;
+	font-size: 18px;
+	border-radius: 10px;
+}
+table a input[type="submit"]:hover
+{ 
+	cursor: pointer;
+	height: 60px;
+	width: inherit;
+	background:#262626;
+	color:#fff;
+}
+table
+{
+	text-decoration: none;
+    border-spacing: inherit;
+    border-style:inset;
+    border: 1px;			
+	width: 100%;
+	text-indent: 50px;
+	background-color:#000000;
+}
+
+
+body
+{
+	
+    background-image:url("2.jfif");
+	background-repeat: no-repeat;
+    background-size:cover;
+			
+}
+
+     
+.SiteLogo
+{
+	padding-top: 10px;
+    width:120px;
+    height:100px;
+	   
+}
+
+
+/*
+@media only screen and (max-width:700px)
+{
+	table
+	{
+		width:100% ;
+		background: auto;
+	}
+}
+*/
+ 
+
+
+	
+.TowerDB table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px;
+}
+
+.TowerDB th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+.TowerDB tr:nth-child(even) {
+  background-color: #A28BF3;
+}
+
+.TowerDB tr:nth-child(odd) {
+  background-color: #7857ED;
+}

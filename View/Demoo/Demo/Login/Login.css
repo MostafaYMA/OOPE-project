@@ -1,0 +1,173 @@
+*{
+	margin: auto;
+}
+
+table a input[type="submit"]
+{
+    text-decoration: none;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #000000;
+	color: #FFFFFF;
+	font-size: 18px;
+	border-radius: 10px;
+}
+table a input[type="submit"]:hover
+{ 
+	cursor: pointer;
+	height: 60px;
+	width: inherit;
+	background:#262626;
+	color:#fff;
+}
+table
+{
+	text-decoration: none;
+    border-spacing: inherit;
+    border-style:inset;
+    border: 1px;			
+	width: 100%;
+	text-indent: 50px;
+	background-color:#000000;
+}
+/*
+marquee
+{
+	height: 21px;
+	text-decoration: none;
+    border-spacing: inherit;
+    border-style:inset;
+    border: 1px;			
+	width: 100%;
+	text-indent: 50px;
+	color: #FFFFFF;
+	background-color:#020202;
+	font-size: 20px;
+}
+*/
+
+body
+{
+	
+    background-image:url("2.jfif");
+	background-repeat: no-repeat;
+    background-size:cover;
+			
+}
+
+     
+.SiteLogo
+{
+	padding-top: 10px;
+    width:120px;
+    height:100px;
+	   
+}
+
+
+
+
+.LoginBox
+{
+	width: 320px;
+	height: 420px;
+	background-color:#000000;
+   	color:#fff;
+	top: 30%;
+	left:35%;
+	position: absolute;
+	box-sizing: border-box;
+	border-style: solid;
+	border-color:#4B5F83;
+	border-radius:5%;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	padding-right: 30px;
+	padding-left: 30px;
+
+}
+.avatar
+{
+	width: 90px;
+	height:90px;
+	border-radius:80%;
+	position: absolute;
+	top: -50px;
+	right:113px;
+}
+
+h1
+{
+	
+	padding-bottom: 20px;
+	text-align:left;
+	font-size: 22px;
+}
+
+.LoginBox p
+{
+	font-weight: bold;
+}
+
+.LoginBox input
+{
+	width: 100%;
+	margin-bottom: 20px;	
+}
+.LoginBox input[type="text"], input[type="password"]
+{
+	border: none;
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;	
+}
+
+.LoginBox input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #4B5F83;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.LoginBox input[type="submit"]:hover
+{
+	cursor: pointer;
+	background:#FFFFFF;
+	color:#000;
+}
+
+.LoginBox a
+{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color:#AAAAAA;
+}
+
+.LoginBox a:hover
+{
+	color: #ffc107;
+}
+
+/*
+@media only screen and (max-width:700px)
+{
+	table
+	{
+		width:100% ;
+		background: auto;
+	}
+}
+*/
+ 
