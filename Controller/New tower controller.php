@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         // Prepare an insert statement
         include_once './CreateClass.php';
         $creator = new CreateClass();
-        if ($creator->insertRecord($towerID,$name, $address, $startdate,$payment)) {
+        if ($creator->insertTower($towerID,$adminID,$name, $address)) {
             header("location: ../View/Demo/Home/Home.html");
         } else {
             echo "Something went wrong. Please try again later.";
