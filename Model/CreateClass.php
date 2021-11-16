@@ -16,7 +16,7 @@ class CreateClass {
         $sql = "INSERT INTO Tower (ID, AdminID, Name, Address) VALUES (?, ?, ?, ?)";
         if ($stmt = mysqli_prepare($this->link, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_ID, $param_AdminID, $param_Name, $param_Address);
+            mysqli_stmt_bind_param($stmt, "iiss", $param_ID, $param_AdminID, $param_Name, $param_Address);
 
             // Set parameters
             $param_ID = $ID;
