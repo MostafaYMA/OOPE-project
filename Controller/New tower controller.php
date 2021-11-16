@@ -1,7 +1,7 @@
 <?php
 // Define variables and initialize with empty values
-$towername = $towerID = $startdate = $phase = $supervisor = $address = $payment = "";
-$name_err = $startdate_err = $payment_err =$address_err = $towerID_err =  "";
+$towername = $towerID = $adminID = $startdate = $phase = $supervisor = $address = $payment = "";
+$name_err = $startdate_err = $payment_err =$address_err = $towerID_err = $adminID_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
@@ -23,14 +23,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $input_towerID = trim($_POST["ID"]);
     if (empty($input_towerID)) {
         $towerID_err = "Please enter the tower ID.";
-    } 
-    elseif (!ctype_digit($input_towerID)) 
-    {
-        $towerID_err = "Please enter a positive integer value.";
-    } 
+    }
     else 
     {
         $towerID = $input_towerID;
+    }
+        
+    // Validate adminID
+    $input_adminID = trim($_POST["ID"]);
+    if (empty($input_adminID)) {
+        $adminID_err = "Please enter the admin ID.";
+    }
+    else 
+    {
+        $adminID = $input_adminID;
     }
 
     // Validate startdate
