@@ -20,7 +20,7 @@ class CreateClass {
 
             // Set parameters
             $param_ID = $ID;
-            $param_AdminID = $AdminID
+            $param_AdminID = $AdminID;
             $param_Name = $name;
             $param_Address = $address;
             
