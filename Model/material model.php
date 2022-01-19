@@ -22,7 +22,7 @@ include_once 'Database.php';
       $this->Quantity = $Quantity;
       $this->Total = $Total;
       $stmt = $this->ye->prepare("INSERT INTO `material with measurements`( `Name`, `Unitid`, `Price`,`Quantity`,`Total`) VALUES (?,?,?,?,?)");
-      $stmt->bind_param("sisss",$this->Name, $this->Unitid, $this->Price, $this->Quantity, $this->Total);
+      $stmt->bind_param("siiii",$this->Name, $this->Unitid, $this->Price, $this->Quantity, $this->Total);
       $stmt->execute();
     }
     public function read($id)
@@ -46,7 +46,7 @@ include_once 'Database.php';
     {
       $kms = "UPDATE `material with measurements` SET `Name`=?,`Unitid`=?, `Price`=?,`Quantity`=?, `Total`=? WHERE ID = $id";
       $stmt = $this->ye->prepare($kms);
-      $stmt->bind_param("sisss",$this->Name, $this->Unitid, $this->Price, $this->Quantity, $this->Total);
+      $stmt->bind_param("siiii",$this->Name, $this->Unitid, $this->Price, $this->Quantity, $this->Total);
       $stmt->execute();
     }
     public function delete($id)
