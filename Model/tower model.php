@@ -12,14 +12,15 @@ include_once 'Database.php';
         $this->db = new Database();
         $this->ye  = $this->db->connectToDB();
     }
-    public function create($AdminID,$Name,$Address)
+   public function create($ID,$AdminID,$Name,$Address)
     {
+      $this->ID = $ID;
       $this->AdminID = $AdminID;
       $this->Name = $Name;
       $this->Address = $Address;
-      $stmt = $this->ye->prepare("INSERT INTO `tower info`( `AdminID`, `Name`, `Address`) VALUES (?,?,?)");
-      $stmt->bind_param("iss",$this->AdminID, $this->Name, $this->Address);
-      $stmt->execute();
+      $stmt = $this->ye->prepare("INSERT INTO `tower info`(`ID`, `AdminID`, `Name`, `Address`) VALUES (?,?,?,?)");
+      $stmt->bind_param("iiss" ,$this->ID,$this->AdminID, $this->Name, $this->Address);
+      return $stmt->execute();
     }
     public function read($id)
     {
