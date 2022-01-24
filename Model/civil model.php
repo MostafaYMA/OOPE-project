@@ -40,7 +40,7 @@ include_once 'Database.php';
           echo "0 results";
       }
     }
-    public function readAll($id)
+    public function readAll()
     {
       $kms = "SELECT * FROM `civil`";
       $stmt =$this->ye->query($kms);
