@@ -1,0 +1,19 @@
+.TowerDB table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px;
+}
+
+.TowerDB th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+.TowerDB tr:nth-child(even) {
+  background-color: #A28BF3;
+}
+
+.TowerDB tr:nth-child(odd) {
+  background-color: #7857ED;
+}
