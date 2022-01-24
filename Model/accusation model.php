@@ -31,11 +31,20 @@ include_once 'Database.php';
       $stmt =$this->ye->query($kms);
       if ($stmt->num_rows > 0) 
       {
-        // output data of each row
-        while($pr = $stmt->fetch_assoc()) 
-        {
-          echo "id: " . $pr["ID"]. " - Statement: " . $pr["Statement"]." - Cash: ".$pr["Cash"] . "Payment: " . $pr["Payment"].   "Receipt: " . $pr["Receipt"]. "Collection: " . $pr["Collection"].  "<br>";
-        }
+        return $stmt;
+      } 
+      else 
+      {
+          echo "0 results";
+      }
+    }
+    public function readAll($id)
+    {
+      $kms = "SELECT * FROM `accusation`"; 
+      $stmt =$this->ye->query($kms);
+      if ($stmt->num_rows > 0) 
+      {
+        return $stmt;
       } 
       else 
       {
