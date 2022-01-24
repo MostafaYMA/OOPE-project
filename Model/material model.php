@@ -31,17 +31,27 @@ include_once 'Database.php';
       $stmt =$this->ye->query($kms);
       if ($stmt->num_rows > 0) 
       {
-        // output data of each row
-        while($pr = $stmt->fetch_assoc()) 
-        {
-          echo "id: " . $pr["ID"]. " - Name " . $pr["Name"]." - Unitid ".$pr["Unitid"] . "Price: " . $pr["Price"].   "Quantity: " . $pr["Quantity"]. "Total: " . $pr["Total"].  "<br>";
-        }
+       return $stmt;
       } 
       else 
       {
           echo "0 results";
       }
     }
+    public function readAll()
+    {
+      $kms = "SELECT * FROM `material with measurements`"; 
+      $stmt =$this->ye->query($kms);
+      if ($stmt->num_rows > 0) 
+      {
+       return $stmt;
+      } 
+      else 
+      {
+          echo "0 results";
+      }
+    }
+    
     public function update($id,$Name,$Unitid,$Price,$Quantity,$Total)
     {
       $kms = "UPDATE `material with measurements` SET `Name`=?,`Unitid`=?, `Price`=?,`Quantity`=?, `Total`=? WHERE ID = $id";
