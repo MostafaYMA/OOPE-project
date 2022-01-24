@@ -27,12 +27,22 @@ include_once 'Database.php';
       $stmt =$this->ye->query($kms);
       if ($stmt->num_rows > 0) 
       {
-        // output data of each row
-        while($pr = $stmt->fetch_assoc()) 
+        return $stmt;
+      } 
+      else 
         {
-          echo "id: " . $pr["ID"]. " - AdminID: " . $pr["AdminID"]. " - Name " . $pr["Name"]." - Address ".$pr["Address"] ."<br>";
+          echo "0 results";
         }
-      } else 
+    }
+    public function readAll()
+    {
+      $kms = "SELECT * FROM `tower info`"; 
+      $stmt =$this->ye->query($kms);
+      if ($stmt->num_rows > 0) 
+      {
+        return $stmt;
+      } 
+      else 
         {
           echo "0 results";
         }
