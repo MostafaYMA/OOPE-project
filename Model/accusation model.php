@@ -42,7 +42,7 @@ include_once 'Database.php';
           echo "0 results";
       }
     }
-    public function update($Statement,$Cash,$Payment,$Receipt,$Collection)
+    public function update($id,$Statement,$Cash,$Payment,$Receipt,$Collection)
     {
       $kms = "UPDATE `accusation` SET `Statement`=?,`Cash amount`=?,`payed from`=?,`receipt number`=?,`Collection`=? WHERE ID = $id";
       $stmt = $this->ye->prepare($kms);
