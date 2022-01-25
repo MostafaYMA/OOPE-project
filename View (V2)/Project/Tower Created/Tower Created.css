@@ -1,19 +1,39 @@
-.TowerDB table {
+
+.TowerDB table
+{
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
+  width: 80%;
   border: 1px;
 }
 
-.TowerDB th, td {
-  text-align: left;
-  padding: 16px;
+
+
+.TowerDB th:nth-child(even)
+{
+	color: #FFFFFF;
+	background-color: #000000;
+	text-align: center;
 }
 
-.TowerDB tr:nth-child(even) {
+
+.TowerDB th:nth-child(odd)
+{
+	color: #FFFFFF;
+	background-color: #000000;
+	text-align: center;
+}
+
+
+
+.TowerDB tr:nth-child(even) 
+{
   background-color: #A28BF3;
 }
+
+
 
 .TowerDB tr:nth-child(odd) {
   background-color: #7857ED;
 }
+

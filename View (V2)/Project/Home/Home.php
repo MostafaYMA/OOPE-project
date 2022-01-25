@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="Home.css">
 <?php
 
-include 'Table.php';
+include 'Bar.php';
 
 ?> 
 	   		 

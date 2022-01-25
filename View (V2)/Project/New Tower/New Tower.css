@@ -49,7 +49,7 @@ label {
 
 
 .btn {
-  background-color: #BC5454;
+  background-color: #26623A;
   color: white;
   padding: 12px;
   margin: 10px 0;
@@ -61,11 +61,12 @@ label {
 }
 
 .btn:hover {
-  background-color: #45a049;
+  background-color: #0C2D60;
 }
 
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+/*
 @media (max-width: 800px) {
   .row {
     flex-direction: column-reverse;
@@ -73,4 +74,4 @@ label {
   .col-25 {
     margin-bottom: 20px;
   }
-}
+}*/

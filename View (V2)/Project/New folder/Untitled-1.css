@@ -1,0 +1,30 @@
+.Table table
+{
+	border:5px solid red;
+	background: #FFFFFF;
+	width: 80%;
+	alignment-baseline: bottom;
+}
+
+.Table th:nth-child(even)
+{
+	color: #FFFFFF;
+	background-color: #000000;
+	text-align: center;
+}
+.Table th:nth-child(odd)
+{
+	color: #FFFFFF;
+	background-color: #000000;
+	text-align: center;
+}
+.Table tr:nth-child(odd)
+{
+	background-color: #AAAAAA;
+	
+}
+.Table tr:nth-child(even)
+{
+	background-color: #AAAAAA;
+	
+}

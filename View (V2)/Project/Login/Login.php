@@ -10,7 +10,7 @@
 
 	<?php
 
-include 'Table.php';
+include 'Bar.php';
 
 ?>    		 
     <body>

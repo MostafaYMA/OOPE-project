@@ -7,7 +7,7 @@
 	</head>
 	<?php
 
-include 'Table.php'
+include 'Bar.php'
 
 ?>
 	<body>
@@ -16,7 +16,7 @@ include 'Table.php'
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form action="/action_page.php">
+      <form action="/New Tower.php">
 
         <div class="row">
           <div class="col-50">
