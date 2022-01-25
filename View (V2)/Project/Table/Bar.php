@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<link rel="stylesheet" href="Table.css">
+<link rel="stylesheet" href="Bar.css">
 <html>
     <table >
         <tr>
