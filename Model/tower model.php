@@ -18,13 +18,13 @@ include_once 'Database.php';
       $this->AdminID = $AdminID;
       $this->Name = $Name;
       $this->Address = $Address;
-      $stmt = $this->ye->prepare("INSERT INTO `tower info`(`ID`, `AdminID`, `Name`, `Address`) VALUES (?,?,?,?)");
+      $stmt = $this->ye->prepare("INSERT INTO `tower_info`(`ID`, `AdminID`, `Name`, `Address`) VALUES (?,?,?,?)");
       $stmt->bind_param("iiss" ,$this->ID,$this->AdminID, $this->Name, $this->Address);
       return $stmt->execute();
     }
     public function read($id)
     {
-      $kms = "SELECT * FROM `tower info` WHERE `ID` = $id"; 
+      $kms = "SELECT * FROM `tower_info` WHERE `ID` = $id"; 
       $stmt =$this->ye->query($kms);
       if ($stmt->num_rows > 0) 
       {
@@ -37,7 +37,7 @@ include_once 'Database.php';
     }
     public function readAll()
     {
-      $kms = "SELECT * FROM `tower info`"; 
+      $kms = "SELECT * FROM `tower_info`"; 
       $stmt =$this->ye->query($kms);
       if ($stmt->num_rows > 0) 
       {
@@ -50,14 +50,14 @@ include_once 'Database.php';
     }
     public function update($id,$AdminID,$Name,$Address)
     {
-      $kms = "UPDATE `tower info` SET `AdminID`=?,`Name`=?,`Address`=? WHERE ID = $id";
+      $kms = "UPDATE `tower_info` SET `AdminID`=?,`Name`=?,`Address`=? WHERE ID = $id";
       $stmt = $this->ye->prepare($kms);
       $stmt->bind_param("iss",$AdminID, $Name, $Address);
       $stmt->execute();
     }
     public function delete($id)
     { 
-      $kms = "DELETE FROM `tower info` WHERE ID = $id";
+      $kms = "DELETE FROM `tower_info` WHERE ID = $id";
       $stmt = $this->ye->prepare($kms);
       $stmt->execute();
     }
