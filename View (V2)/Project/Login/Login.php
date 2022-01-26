@@ -25,7 +25,7 @@ include 'Bar.php';
 					<input type="password" name="" placeholder="Enter Password">
 					<input type="submit" value="Login">
 					<a href="#">Forgot your password?</a><br>
-					<a href="D:\CS\CS\CS314 (Object-Oriented Software Engineering)\Project\Demo\xampp\htdocs\Project\SignUp\SignUp.php">Don't have an account?</a>
+					<a href="SignUp.php">Don't have an account?</a>
 					
 				</form>
 				
