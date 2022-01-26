@@ -13,19 +13,19 @@ class updateClass {
         $this->link = $this->db->connectToDB();
     }
 
-    public function update($ID, $AdminID, $name, $address, $id) {
-        $sql = "UPDATE tower SET ID=?, AdminID=?, name=?, address=?, WHERE id=?";
+    public function update($ID, $AdminID, $name, $address, $phase, $ID) {
+        $sql = "UPDATE tower_info SET ID=?, AdminID=?, Name=?, Address=?, Phase=? WHERE ID=?";
 
         if ($stmt = mysqli_prepare($this->link, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "iissi",$param_ID, $param_AdminID, $param_name, $param_address,$param_id);
+            mysqli_stmt_bind_param($stmt, "sssi", $param_AdminID, $param_name, $param_address, $param_phase, $param_id);
 
             // Set parameters
-            $param_ID = $ID;
-            $param_AdminID = $AdminID;
+            $param_AdminID =$AdminID
             $param_name = $name;
             $param_address = $address;
-            $param_id = $id;
+            $param_salary = $salary;
+            $param_ID = $id;
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {

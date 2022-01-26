@@ -2,12 +2,12 @@
 <?php
 
 // Process delete operation after confirmation
-if (isset($_POST["id"]) && !empty($_POST["id"])) {
-    $ID == $_POST["id"];
+if (isset($_POST["ID"]) && !empty($_POST["id"])) {
+    $id == $_POST["id"];
     // Prepare a delete statement
     include_once '../Model/DeleteClass.php';
     $delete = new DeleteClass();
-    if ($delete->delete($ID)) {
+    if ($delete->delete($id)) {
         header("location: ../index.php");
     } else {
         echo "Something went wrong. Please try again later.";

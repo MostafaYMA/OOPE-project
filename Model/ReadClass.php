@@ -17,7 +17,7 @@ class ReadClass {
     public function readAll() {
 
         // Attempt select query execution
-        $sql = "SELECT * FROM tower";
+        $sql = "SELECT * FROM tower_info";
         if ($result = mysqli_query($this->link, $sql)) {
             return $result;
         } else {
@@ -30,15 +30,15 @@ class ReadClass {
         return false;
     }
 
-    public function readOneRecord($id) {
-        $sql = "SELECT * FROM tower WHERE id = ?";
+    public function readOneRecord($ID) {
+        $sql = "SELECT * FROM tower_info WHERE ID = ?";
 
         if ($stmt = mysqli_prepare($this->link, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "i", $param_id);
+            mysqli_stmt_bind_param($stmt, "i", $param_ID);
 
             // Set parameters
-            $param_id = $id;
+            $param_ID = $ID;
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {

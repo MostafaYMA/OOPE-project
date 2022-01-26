@@ -6,11 +6,12 @@ if (mysqli_num_rows($result) > 0) {
     echo "<table class='table table-bordered table-striped'>";
     echo "<thead>";
     echo "<tr>";
-  
-    echo "<th>ID</th>";
+     echo "<th>ID</th>";
     echo "<th>AdminID</th>";
     echo "<th>Name</th>";
     echo "<th>Address</th>";
+    echo "<th>Phase</th>";
+    echo "<th>Action</th>";
     echo "</tr>";
     echo "</thead>";
     echo "<tbody>";
@@ -20,6 +21,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "<td>" . $row['AdminID'] . "</td>";
         echo "<td>" . $row['Name'] . "</td>";
         echo "<td>" . $row['Address'] . "</td>";
+        echo "<td>" . $row['Phase'] . "</td>";
         echo "<td>";
         echo "<a href='View/read.php?id=" . $row['ID'] . "' title='View Record' data-toggle='tooltip'>
 							<span class='glyphicon glyphicon-eye-open'></span>

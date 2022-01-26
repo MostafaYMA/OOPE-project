@@ -3,16 +3,15 @@
 
 // Include config file
 // Define variables and initialize with empty values
-$ID = $AdminID = $name = $address =  "";
-$ID_err = $AdminID_err = $name_err = $address_err = "";
+$ID = $AdminID = $name = $address = $phase = "";
+$ID_err= $AdminID_err = $name_err = $address_err = $phase_err = "";
 
 // Processing form data when form is submitted
 if (isset($_POST["id"]) && !empty($_POST["id"])) {
     echo 'post';
 
     // Get hidden input value
-    $ID = $_POST["id"];
-    $AdminID = $_POST["AdminID"];
+    $id = $_POST["id"];
 
     // Validate name
     $input_name = trim($_POST["name"]);
@@ -32,14 +31,22 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
         $address = $input_address;
     }
 
-   
+    // Validate phase
+    $input_phase = trim($_POST["phase"]);
+    if (empty($input_phase)) {
+        $phase_err = "Please enter the phase.";
+    } elseif (!ctype_digit($input_phase)) {
+        $phase_err = "Please enter 1-3.";
+    } else {
+        $phase = $input_phase;
+    }
 
     // Check input errors before inserting in database
-    if (empty($ID_err) && empty($AdminID_err) && empty($name_err) && empty($address_err)) {
+    if (empty($ID_err) && empty($AdminID_err) && empty($name_err) && empty($address_err) && empty($phase_err)) {
         // Prepare an update statement
         include_once '../Model/updateClass.php';
         $updator = new updateClass();
-        if ($updator->update($ID, $AdminID ,$name , $address)) {
+        if ($updator->update($AdminID, $name, $address, $phase, $id)) {
             header("location: ../index.php");
         } else {
             echo "Something went wrong. Please try again later.";
@@ -63,7 +70,7 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
             $AdminID = $row["AdminID"];
             $name = $row["Name"];
             $address = $row["Address"];
-            
+            $phase = $row["Phase"];
         }
         else {
                     echo "Something went wrong. Please try again later.";

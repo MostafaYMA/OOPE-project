@@ -14,13 +14,13 @@ class DeleteClass {
     }
 
     public function delete($id) {
-        $sql = "DELETE FROM tower WHERE id = ?";
+        $sql = "DELETE FROM tower_info WHERE ID = ?";
         if ($stmt = mysqli_prepare($this->link, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "i", $param_id);
+            mysqli_stmt_bind_param($stmt, "i", $param_ID);
 
             // Set parameters
-            $param_id = trim($_POST["id"]);
+            $param_ID = trim($_POST["ID"]);
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {

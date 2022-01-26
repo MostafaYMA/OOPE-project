@@ -8,9 +8,9 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
     if ($row = $reader->readOneRecord($id)) {
         $ID = $row["ID"];
         $AdminID = $row["AdminID"];
-        $name = $row["Name"];
-        $address = $row["Address"];
-       
+        $name = $row["name"];
+        $address = $row["address"];
+        $phase = $row["phase"];
     } else {
         echo "Something went wrong. Please try again later.";
     }

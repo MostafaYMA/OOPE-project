@@ -12,18 +12,18 @@ class CreateClass {
         $this->link = $this->db->connectToDB();
     }
 
-    public function insertTower($ID, $AdminID, $name, $address) {
-        $sql = "INSERT INTO Tower (ID, AdminID, Name, Address) VALUES (?, ?, ?, ?)";
+    public function insertRecord($ID, $AdminID, $name, $address, $phase) {
+        $sql = "INSERT INTO tower_info (ID, AdminID, Name, Address, Phase) VALUES (?, ?, ?, ?, ?)";
         if ($stmt = mysqli_prepare($this->link, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "iiss", $param_ID, $param_AdminID, $param_Name, $param_Address);
+            mysqli_stmt_bind_param($stmt, "sss",$para_ID, $para_AdminID, $param_name, $param_address, $param_phase);
 
             // Set parameters
             $param_ID = $ID;
-            $param_AdminID = $AdminID;
-            $param_Name = $name;
-            $param_Address = $address;
-            
+            $param_AdminID = $AdminID
+            $param_name = $name;
+            $param_address = $address;
+            $param_phase = $phase;
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {

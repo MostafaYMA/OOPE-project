@@ -2,7 +2,7 @@
 session_start();
 include_once('db_con.php');
 if(isset($_POST['UserID']) && isset($_POST['password'])) {
-  function validate($data);
+  function validate($data){
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
@@ -23,6 +23,7 @@ if (mysqli_num_rows($result) === 1){
   if($row['UserID'] === $UserID && $row['password'] === $password) {
     $_SESSION['UserID'] = $row['UserID'];
     $_SESSION['name'] = $row['Name'];
+    $_SESSION['userType'] = $row['userType'];
     header("Location: home.php");
     exit();
   }else {
@@ -33,7 +34,6 @@ if (mysqli_num_rows($result) === 1){
 			header("Location: index.php?error=Incorect User name or password");
 	        exit();
 		}
-
 }else{
        header("Location: index.php");
   exit();
