@@ -18,7 +18,7 @@ include 'Bar.php';
         	<div class="LoginBox">
 			<img src="3.png" alt="Login Icon" class="avatar">
 				<h1>SignUp Here</h1>
-				<form action="Login.html" method= "post">
+				<form action="Sign.php" method= "post">
 					<p>First Name</p>
 					<input type="text" name="fname" placeholder="Enter First Name">
                     <p>Last Name</p>
