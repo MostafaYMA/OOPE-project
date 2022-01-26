@@ -6,7 +6,11 @@
     
     </head>
 	<link rel="stylesheet" href="Home.css">
+	<?php
 
+include 'Bar.php';
+
+?>
 	   		 
     <body>
 
